@@ -1,0 +1,12 @@
+latex/**/*.*
+!latex/images/*.jpg
+!latex/images/*.jpeg
+!latex/images/*.png
+!latex/*.tex
+!latex/*.sty
+!latex/*.bib
+!latex/*.cls
+!latex/sections/*.tex
+
+docs/**/*.*
+!docs/document.pdf
