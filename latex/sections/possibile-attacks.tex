@@ -1,1 +1,30 @@
 \section{Angriffsmöglichkeiten}
+Wie in fast jedem anderen System müssen vor allem IoT-Anwendungen besonders
+bezüglich ihrer Sicherheit betrachtet werden. Die Anwendungsentwicklung
+innerhalb des IoT ist geprägt von vielseitig komplexen Problemen beim Etablieren
+der IT-Sicherheit. Grundsätzlich können Sicherheitsrisiken in drei Bereiche
+untergliedert werden, die hier kurz erläutert werden sollen.
+
+\paragraph{Heterogenität.}
+Dieser Bereich behandelt Probleme, die durch die Vielzahl an
+Anwendungsmöglichkeiten in dem IoT entstehen. Dazu zählen unter anderem
+die verbauten Hardware-Komponenten, Protokolle für die Kommunikation unter
+Geräten und Variationen zwischen Geräten und ihrer Rechenleistung.
+
+\paragraph{Ressourcenbeschränkung.}
+Nicht jedes Gerät beinhaltet einen leistungsstarken Rechner. Oft stößt man bei
+der Entwicklung von IoT-Geräten auf das Problem, dass nicht genug Speicher oder
+Rechenleistung vorhanden ist. Nicht nur bei der Implementation der eigentlichen
+Anwendung macht dies Probleme. Bereits etablierte Sicherheitsalgorithmen können
+aufgrund fehlender Leistung nicht verwendet werden, da sie sich als
+unpraktikabel in dem IoT herausstellen. Sicherheitsziele können also aufgrund
+nicht ausreichender Hardware nicht erreicht werden. Ein Beispiel hierfür ist das
+Arbeiten mit einer Cloud. Sicherheitsziele ist hier unter anderem die
+Privatsphäre des Benutzers. Die üblichen kryptographischen Algorithmen, z.B. die
+attribut-basierte Verschlüsselungen und Pairings, stellen sich als sehr
+unpraktikabel heraus, da diese zu viel Rechenleistung für die Berechnungen von
+bilinearen Abbildungen benötigen. Eine vielversprechende Lösung ist das
+Auslagern rechenintensiver Schritte an einem leistungsstarken Server
+\cite{phoabe}.
+
+\paragraph{Dynamische Netzwerktopologie.}
