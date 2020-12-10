@@ -34,7 +34,7 @@ zu tun. Zum Beispiel ist es möglich, dass ein Smartphone mit diversen
 WLAN-Hotspots interagiert und damit keine feste Position innerhalb eines
 Netzwerkes besitzt \cite{paper}.
 
-\subsection{Definition von Sicherheit}
+\subsection{Definition von Sicherheit}\label{sec:def-security}
 Damit die Sicherheit trotz der oben erwähnten Herausforderungen ge\-währ\-lei\-stet
 werden kann, genügt es nicht, das allseits bekannte CIA-Dreieck zu betrachten.
 Laut \cite{paper} sind Vertraulichkeit, Integrität und Verfügbarkeit nicht die
@@ -57,3 +57,46 @@ abweichen. Diese sind hier unter anderem Verfügbarkeit, Zuverlässigkeit,
 Authentifizierung, Integrität, Vertraulichkeit, Privatsphäre,
 Nachrichtenauthentizität, Fälschungsdetektierung, Verantwortlichkeit und
 Nichabstreitbarkeit \cite{paper}.
+
+\subsection{Sicherheitsrisiken pro Domäne}
+Im vorherigen Abschnitt wurde auf verschiedene IoT-Domänen und ihren
+Sicherheitsanforderungen eingegangen. Kurz zusammengefasst ist jede Domäne
+unterschiedlich zu behandeln, wenn es um Sicherheit geht. Angreifer, die
+Schwachstellen in solchen Systemen finden, haben unter Umständen Zugriff auf
+eine große Menge von sensiblen Daten. Mögliche Angriffe können auf Grundlage der
+Sicherheitsanforderungen aus Abschnitt \ref{sec:def-security} abgeleitet werden
+\cite{paper} und werden in Tabelle \ref{tab:security-threats} dargestellt.
+
+\begin{table}
+  \footnotesize
+  \centering
+  \label{tab:security-threats}
+  \begin{tabular}{p{4cm}p{9cm}}
+    \textbf{Anwendungsdomäne} & \textbf{Mögliche Angriffe}\\
+    \hline
+    Umgebungsüberwachung & DoS/DDoS, MitM, Node capture, Sinkhole, Hello flood,
+    Traffic analysis, Hacking, Side channel, Sybil, Selective forwarding, Back
+    hole, Tampering, Wormhole, Masquerading \\
+
+    Gesundheitswesen & DoS/DDoS, MitM, Malicious code, Spoofing, Hacking,
+    Tampering, Eavesdropping, Hijacking, Replay, Backdoof, Tag tracking, Tag
+    cloning, Identity theft, Masquerading, Node capture, Side channel \\
+
+    Feuerwehr & DoS/DDoS, MitM, Sybil, Hello flood, Node capture, Sinkhole,
+    Black hole, Selective forwarding, Hacking, Tampering, Malicious code,
+    Hijacking, Side channel, Traffic analysis, GPS jamming \\
+
+    Herstellung & DoS/DDoS, MitM, Masquerading, Backdoor, Identity theft,
+    Replay, Hijacking, Hacking, Eavesdropping, Selective forwarding, Back hole,
+    Sinkhole, Node capture, Sybil, Spoofing, Traffic analysis, Side channel,
+    Tampering, Wormhole, Malicious code, Wormhole, Economic espionage \\
+
+    Wearables & DoS/DDoS, Eavesdropping, MitM, Malicious code, Identity theft,
+    Hacking, Backdoor, Hijacking, inappropriate network configuration \\
+
+    Spielzeuge & DoS/DDoS, Eavesdropping, MitM, Identity theft, Hijacking,
+    Hacking, Backdoor, Masquerading, Spoofing, Malicious code, inappropriate
+    network configuration
+  \end{tabular}
+  \caption{Sicherheitsrisiken pro Domäne \cite{paper}}
+\end{table}
