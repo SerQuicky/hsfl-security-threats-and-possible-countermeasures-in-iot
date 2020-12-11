@@ -1,1 +1,52 @@
 \section{Verteidigung gegen Angriffe}
+
+\paragraph{Gegenmaßnahmen gegen unsichere Web-Interfaces und Netzwerkdienste.}
+Damit ein Fluten von Authentifizierungsanfragen verhindert werden kann, können
+Standardports geblockt werden. Für SSH ist dies beispielsweise der Port 22 und
+für Telnet der Port 23 bzw. 2323. Grundsätzlich sollten nur die Ports
+geöffnet werden, die wirklich benötigt werden. Auch das \textit{Universial Plug
+and Play Protocol} (UPnP) sollte deaktiviert werden. Außerdem werden häufig
+Standardeinstellungen wie Benutzernamen und Passwörter unverändert übernommen.
+Dies ist offensichtlich ein großes Problem, denn ein Angreifer wird diese
+Information ohne großen Aufwand herausfinden können. Man sollte also darauf
+achten, individuelle und starke Passwörter zu verwenden. Auch die Software
+selbst sollte regelmäßig Updates eingespielt bekommen, denn häufig werden
+Schwachstellen erst nach einem Release festgestellt und Patches
+veröffentlicht \cite{paper}.
+
+\paragraph{Gegenmaßnahmen für Routing-Protokolle.}
+Da IoT-Geräte sehr eingeschränkter Natur sind, ist das Schützen von
+IoT-Netzwerken eine echte Herausforderung \cite{patel2016}. Sinkhole-Angriffe
+können laut \cite{paper} verhindert werden, indem robuste
+Authentifikation-Schemata, geografisches Routing und systematisches Rerouting
+verwendet werden.  Geografisches Routing bedeutet, dass Datenpakete abhängig der
+Position von Knotenpunkten und der Zieladresse innerhalb des Netzwerks
+umgeleitet werden.  Die Chancen, dass Forwarding- und Black-Hole-Angriffe
+durchführbar sind, können mithilfe von Source-Routing reduziert werden.
+Verwendet man Multipath-Routing, dann können Selective-Forwarding-Angriffe
+abgewehrt werden. Hierbei werden verschiedene Pfade innerhalb des Netzwerks
+verwendet. Hello-Flood-Angriffe können durch bidirektionale Authentifikation
+verhindert werden.  Wormhole-Angriffe können ebenfalls durch geografisches
+Routing erschwert durchführbar gemacht werden. Aber auch durch physische
+Überwachung oder Source-Rou\-ting können Angriffe dieser Art verhindert werden.
+Gegenmaßnamen gegen Sybil-Angriffe ist die Evaluierung der Einzigartigkeit von
+Geräten im Netzwerk.  Dies bedeutet lediglich, dass jedes Gerät eine eindeutige
+Identifikationsnummer besitzen muss. Auch mithilfe von sogenannten
+Random-Key-Pre-Dis\-tri\-bu\-tion-Schemata \cite{chan2003} können Sybil-Angriffe
+verhindert werden.
+
+\paragraph{Gegenmaßnahmen für Informationstransport}
+Bevor ein Smart-Device einen Datenaustausch beginnt, sollte sich dieses
+Gerät vorerst authentifizieren. Ebenfalls sollte eine beidseitige
+Authentifizierung implementiert werden, damit beide Parteien verifizieren
+können, ob es sich um den richtigen Endpunkt handelt und sie mit dem gewünschten
+Ziel kommunizieren. Die Idee hierbei ist, dass zum Beispiel digitale Signaturen
+(SHA, ECDSA) bzw. symmetrische äquivalente (HMAC) ausgetauscht werden. Dies
+dient vor allem für die Einhaltung der Integrität der Daten. Ebenfalls können
+Signaturen verwendet werden, um einen Secure-Boot zu implementieren. Dies hilft
+dabei, dass das IoT-Gerät nur Codes ausführt, die vertrauenswürdig, also
+signiert sind. Vor allem wird dadurch verhindert, dass zum Beispiel die Firmware
+des Geräts überspielt wird. Um die Angriffe abzuwehren, die die Vertraulichkeit
+betreffen, werden Informationen über einen sicheren, verschlüsselten Kanal
+übertragen. Dies betrifft auch die Kommunikation mit externen Diensten, wie
+einer Cloud.
