@@ -1,1 +1,83 @@
 \section{Verteidigung gegen Angriffe}
+
+\paragraph{Gegenmaßnahmen für unsichere Web-Interfaces und Netzwerkdienste.}
+Damit ein Fluten von Authentifizierungsanfragen verhindert werden kann, können
+Standardports geblockt werden. Für SSH ist dies beispielsweise der Port 22 und
+für Telnet der Port 23 bzw. 2323. Grundsätzlich sollten nur die Ports
+geöffnet werden, die wirklich benötigt werden. Auch das \textit{Universial Plug
+and Play Protocol} (UPnP) sollte deaktiviert werden. Außerdem werden häufig
+Standardeinstellungen wie Benutzernamen und Passwörter unverändert übernommen.
+Dies ist offensichtlich ein großes Problem, denn ein Angreifer wird diese
+Information ohne großen Aufwand herausfinden können. Man sollte also darauf
+achten, individuelle und starke Passwörter zu verwenden. Auch die Software
+selbst sollte regelmäßig Updates eingespielt bekommen, denn häufig werden
+Schwachstellen erst nach einem Release festgestellt und Patches
+veröffentlicht \cite{paper}.
+
+\paragraph{Gegenmaßnahmen für Routing-Protokolle.}
+Da IoT-Geräte sehr eingeschränkter Natur sind, ist das Schützen von
+IoT-Netzwerken eine echte Herausforderung \cite{patel2016}. Sinkhole-Angriffe
+können laut \cite{paper} verhindert werden, indem robuste
+Authentifikation-Schemata, geografisches Routing und systematisches Rerouting
+verwendet werden.  Geografisches Routing bedeutet, dass Datenpakete abhängig der
+Position von Knotenpunkten und der Zieladresse innerhalb des Netzwerks
+umgeleitet werden.  Die Chancen, dass Forwarding- und Black-Hole-Angriffe
+durchführbar sind, können mithilfe von Source-Routing reduziert werden.
+Verwendet man Multipath-Routing, dann können Selective-Forwarding-Angriffe
+abgewehrt werden. Hierbei werden verschiedene Pfade innerhalb des Netzwerks
+verwendet. Hello-Flood-Angriffe können durch bidirektionale Authentifikation
+verhindert werden.  Wormhole-Angriffe können ebenfalls durch geografisches
+Routing erschwert durchführbar gemacht werden. Aber auch durch physische
+Überwachung oder Source-Rou\-ting können Angriffe dieser Art verhindert werden.
+Gegenmaßnamen gegen Sybil-Angriffe ist die Evaluierung der Einzigartigkeit von
+Geräten im Netzwerk.  Dies bedeutet lediglich, dass jedes Gerät eine eindeutige
+Identifikationsnummer besitzen muss. Auch mithilfe von sogenannten
+Random-Key-Pre-Dis\-tri\-bu\-tion-Schemata \cite{chan2003} können Sybil-Angriffe
+verhindert werden.
+
+\paragraph{Gegenmaßnahmen für Informationstransport.}
+Bevor ein Smart-De\-vice einen Datenaustausch beginnt, sollte sich dieses
+Gerät vorerst authentifizieren. Ebenfalls sollte eine beidseitige
+Authentifizierung implementiert werden, damit beide Parteien verifizieren
+können, ob es sich um den richtigen Endpunkt handelt und sie mit dem gewünschten
+Ziel kommunizieren. Die Idee hierbei ist, dass zum Beispiel digitale Signaturen
+(SHA, ECDSA) bzw. symmetrische äquivalente (HMAC) ausgetauscht werden. Dies
+dient vor allem für die Einhaltung der Integrität der Daten. Ebenfalls können
+Signaturen verwendet werden, um einen Secure-Boot zu implementieren. Dies hilft
+dabei, dass das IoT-Gerät nur Codes ausführt, die vertrauenswürdig, also
+signiert sind. Vor allem wird dadurch verhindert, dass zum Beispiel die Firmware
+des Geräts überspielt wird. Um die Angriffe abzuwehren, die die Vertraulichkeit
+betreffen, werden Informationen über einen sicheren, verschlüsselten Kanal
+übertragen. Dies betrifft auch die Kommunikation mit externen Diensten, wie
+einer Cloud \cite{paper}.
+
+\paragraph{Gegenmaßnahmen für physische Angriffe.}
+Um zum Beispiel Node-Capturing zu verhindern, müssen Geräte physisch versteckt
+werden, um den Zugang zu erschweren. Außerdem können die Geräte so gebaut
+werden, sodass diese nur sehr schwer auseinanderbaubar sind. USB-Ports sollten
+zudem auch geschützt werden, damit ein Angreifer keine Schadsoftware über diese
+einspielen kann. Schutzmaßnahmen gegen das Manipulieren von Daten können durch
+regelmäßige Änderung der Schlüssel eingeführt werden. Side-Channel-Angriffe
+können durch spezielle, resistente Chipsätze verhindert werden.
+Das Messen von elektromagnetische Strahlung muss beim Entwickeln von IoT-Geräten
+ebenfalls berücksichtigt werden. Das Verschleiern von Informationen auf diesem
+Wege muss also ebenfalls implementiert werden, damit Angreifer nicht mithilfe
+von elektrischen Signalen Zugriff bekommen \cite{paper}.
+
+\paragraph{Gegenmaßnahmen für GPS-Jamming.}
+Um GPS-Jamming-Angriffe abzuwehren, können Kerbfilter \cite{borio2012}
+eingesetzt werden \cite{paper}.
+
+\paragraph{Gegenmaßnahmen für Tag-Tracking und -Cloning.}
+Eine Schutzmaßnahme gegen das Tag-Tracking ist, dass die Tags gegenüber einem
+Angreifer zufällig aussehen und eine gleiche Verteilung besitzen, damit dieser
+keine Schlüsse aus dem Aufbau der Tags ziehen kann. Um Tag-Cloning zu
+verhindern, muss sichergestellt werden, dass die eigentlichen Informationen
+unter dem Tag nicht zugänglich sind, um einen neuen validen Tag zu erzeugen
+\cite{paper}.
+
+\paragraph{Gegenmaßnahmen für falsche Netwerkkonfiguration.}
+Die Schutzmaßnahme ist hier sozialer Natur. Ein Schulen der Benutzer über die
+Wichtigkeit der IT-Sicherheit ist unabdingbar. Es müssen starke Regeln für
+Passwörter verwendet und sicherheitsrelevantes Logging aktiviert werden
+\cite{paper}.
