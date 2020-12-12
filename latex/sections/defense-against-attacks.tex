@@ -1,6 +1,6 @@
 \section{Verteidigung gegen Angriffe}\label{sec:defense-against-attacks}
 
-\paragraph{Gegenmaßnahmen für unsichere Web-Interfaces und Netzwerkdienste.}
+\paragraph{Gegenmaßnahmen gegen unsichere Web-Interfaces und Netzwerkdienste.}
 Damit ein Fluten von Authentifizierungsanfragen verhindert werden kann, können
 Standardports geblockt werden. Für SSH ist dies beispielsweise der Port 22 und
 für Telnet der Port 23 bzw. 2323. Grundsätzlich sollten nur die Ports geöffnet
@@ -14,7 +14,7 @@ selbst sollte regelmäßig Updates eingespielt bekommen, denn häufig werden
 Schwachstellen erst nach einem Release festgestellt und Patches veröffentlicht
 \cite{paper}.
 
-\paragraph{Gegenmaßnahmen für Routing-Protokolle.}
+\paragraph{Gegenmaßnahmen gegen Routing-Protokolle.}
 Da IoT-Geräte sehr eingeschränkter Natur sind, ist das Schützen von
 IoT-Netzwerken eine echte Herausforderung \cite{patel2016}. Sinkhole-Angriffe
 können laut \cite{paper} verhindert werden, indem robuste
@@ -35,7 +35,7 @@ Identifikationsnummer besitzen muss. Auch mithilfe von sogenannten
 Random-Key-Pre-Dis\-tri\-bu\-tion-Schemata \cite{chan2003} können Sybil-Angriffe
 verhindert werden.
 
-\paragraph{Gegenmaßnahmen für Informationstransport.}
+\paragraph{Gegenmaßnahmen gegen unerlaubten Informationstransport.}
 Bevor ein Smart-De\-vice einen Datenaustausch beginnt, sollte sich dieses Gerät
 vorerst authentifizieren. Ebenfalls sollte eine beidseitige Authentifizierung
 implementiert werden, damit beide Parteien verifizieren können, ob es sich um
@@ -51,7 +51,7 @@ werden Informationen über einen sicheren, verschlüsselten Kanal übertragen. D
 betrifft auch die Kommunikation mit externen Diensten, wie einer Cloud
 \cite{paper}.
 
-\paragraph{Gegenmaßnahmen für physische Angriffe.}
+\paragraph{Gegenmaßnahmen gegen physische Angriffe.}
 Um zum Beispiel Node-Capturing zu verhindern, müssen Geräte physisch versteckt
 werden, um den Zugang zu erschweren. Außerdem können die Geräte so gebaut
 werden, sodass diese nur sehr schwer auseinanderbaubar sind. USB-Ports sollten
@@ -64,11 +64,11 @@ berücksichtigt werden. Das Verschleiern von Informationen auf diesem Wege muss
 also ebenfalls implementiert werden, damit Angreifer nicht mithilfe von
 elektrischen Signalen Zugriff bekommen \cite{paper}.
 
-\paragraph{Gegenmaßnahmen für GPS-Jamming.}
+\paragraph{Gegenmaßnahmen gegen GPS-Jamming.}
 Um GPS-Jamming-Angriffe abzuwehren, können Kerbfilter eingesetzt werden
 \cite{paper,borio2012}.
 
-\paragraph{Gegenmaßnahmen für Tag-Tracking und -Cloning.}
+\paragraph{Gegenmaßnahmen gegen Tag-Tracking und -Cloning.}
 Eine Schutzmaßnahme gegen das Tag-Tracking ist, dass die Tags gegenüber einem
 Angreifer zufällig aussehen und eine gleiche Verteilung besitzen, damit dieser
 keine Schlüsse aus dem Aufbau der Tags ziehen kann. Um Tag-Cloning zu
@@ -76,7 +76,7 @@ verhindern, muss sichergestellt werden, dass die eigentlichen Informationen
 unter dem Tag nicht zugänglich sind, um einen neuen validen Tag zu erzeugen
 \cite{paper}.
 
-\paragraph{Gegenmaßnahmen für falsche Netwerkkonfiguration.}
+\paragraph{Gegenmaßnahmen gegen falsche Netwerkkonfiguration.}
 Die Schutzmaßnahme ist hier sozialer Natur. Ein Schulen der Benutzer über die
 Wichtigkeit der IT-Sicherheit ist unabdingbar. Es müssen starke Regeln für
 Passwörter verwendet und sicherheitsrelevantes Logging aktiviert werden
