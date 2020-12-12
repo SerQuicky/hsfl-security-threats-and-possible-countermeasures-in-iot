@@ -1,18 +1,18 @@
-\section{Verteidigung gegen Angriffe}
+\section{Verteidigung gegen Angriffe}\label{sec:defense-against-attacks}
 
 \paragraph{Gegenmaßnahmen für unsichere Web-Interfaces und Netzwerkdienste.}
 Damit ein Fluten von Authentifizierungsanfragen verhindert werden kann, können
 Standardports geblockt werden. Für SSH ist dies beispielsweise der Port 22 und
-für Telnet der Port 23 bzw. 2323. Grundsätzlich sollten nur die Ports
-geöffnet werden, die wirklich benötigt werden. Auch das \textit{Universial Plug
-and Play Protocol} (UPnP) sollte deaktiviert werden. Außerdem werden häufig
+für Telnet der Port 23 bzw. 2323. Grundsätzlich sollten nur die Ports geöffnet
+werden, die wirklich benötigt werden. Auch das \textit{Universial Plug and Play
+Protocol} (UPnP) sollte deaktiviert werden. Außerdem werden häufig
 Standardeinstellungen wie Benutzernamen und Passwörter unverändert übernommen.
 Dies ist offensichtlich ein großes Problem, denn ein Angreifer wird diese
 Information ohne großen Aufwand herausfinden können. Man sollte also darauf
 achten, individuelle und starke Passwörter zu verwenden. Auch die Software
 selbst sollte regelmäßig Updates eingespielt bekommen, denn häufig werden
-Schwachstellen erst nach einem Release festgestellt und Patches
-veröffentlicht \cite{paper}.
+Schwachstellen erst nach einem Release festgestellt und Patches veröffentlicht
+\cite{paper}.
 
 \paragraph{Gegenmaßnahmen für Routing-Protokolle.}
 Da IoT-Geräte sehr eingeschränkter Natur sind, ist das Schützen von
@@ -36,20 +36,20 @@ Random-Key-Pre-Dis\-tri\-bu\-tion-Schemata \cite{chan2003} können Sybil-Angriff
 verhindert werden.
 
 \paragraph{Gegenmaßnahmen für Informationstransport.}
-Bevor ein Smart-De\-vice einen Datenaustausch beginnt, sollte sich dieses
-Gerät vorerst authentifizieren. Ebenfalls sollte eine beidseitige
-Authentifizierung implementiert werden, damit beide Parteien verifizieren
-können, ob es sich um den richtigen Endpunkt handelt und sie mit dem gewünschten
-Ziel kommunizieren. Die Idee hierbei ist, dass zum Beispiel digitale Signaturen
-(SHA, ECDSA) bzw. symmetrische äquivalente (HMAC) ausgetauscht werden. Dies
-dient vor allem für die Einhaltung der Integrität der Daten. Ebenfalls können
-Signaturen verwendet werden, um einen Secure-Boot zu implementieren. Dies hilft
-dabei, dass das IoT-Gerät nur Codes ausführt, die vertrauenswürdig, also
-signiert sind. Vor allem wird dadurch verhindert, dass zum Beispiel die Firmware
-des Geräts überspielt wird. Um die Angriffe abzuwehren, die die Vertraulichkeit
-betreffen, werden Informationen über einen sicheren, verschlüsselten Kanal
-übertragen. Dies betrifft auch die Kommunikation mit externen Diensten, wie
-einer Cloud \cite{paper}.
+Bevor ein Smart-De\-vice einen Datenaustausch beginnt, sollte sich dieses Gerät
+vorerst authentifizieren. Ebenfalls sollte eine beidseitige Authentifizierung
+implementiert werden, damit beide Parteien verifizieren können, ob es sich um
+den richtigen Endpunkt handelt und sie mit dem gewünschten Ziel kommunizieren.
+Die Idee hierbei ist, dass zum Beispiel digitale Signaturen (SHA, ECDSA) bzw.
+symmetrische äquivalente (HMAC) ausgetauscht werden. Dies dient vor allem für
+die Einhaltung der Integrität der Daten. Ebenfalls können Signaturen verwendet
+werden, um einen Secure-Boot zu implementieren. Dies hilft dabei, dass das
+IoT-Gerät nur Codes ausführt, die vertrauenswürdig, also signiert sind. Vor
+allem wird dadurch verhindert, dass zum Beispiel die Firmware des Geräts
+überspielt wird. Um die Angriffe abzuwehren, die die Vertraulichkeit betreffen,
+werden Informationen über einen sicheren, verschlüsselten Kanal übertragen. Dies
+betrifft auch die Kommunikation mit externen Diensten, wie einer Cloud
+\cite{paper}.
 
 \paragraph{Gegenmaßnahmen für physische Angriffe.}
 Um zum Beispiel Node-Capturing zu verhindern, müssen Geräte physisch versteckt
@@ -58,11 +58,11 @@ werden, sodass diese nur sehr schwer auseinanderbaubar sind. USB-Ports sollten
 zudem auch geschützt werden, damit ein Angreifer keine Schadsoftware über diese
 einspielen kann. Schutzmaßnahmen gegen das Manipulieren von Daten können durch
 regelmäßige Änderung der Schlüssel eingeführt werden. Side-Channel-Angriffe
-können durch spezielle, resistente Chipsätze verhindert werden.
-Das Messen von elektromagnetische Strahlung muss beim Entwickeln von IoT-Geräten
-ebenfalls berücksichtigt werden. Das Verschleiern von Informationen auf diesem
-Wege muss also ebenfalls implementiert werden, damit Angreifer nicht mithilfe
-von elektrischen Signalen Zugriff bekommen \cite{paper}.
+können durch spezielle, resistente Chipsätze verhindert werden.  Das Messen von
+elektromagnetische Strahlung muss beim Entwickeln von IoT-Geräten ebenfalls
+berücksichtigt werden. Das Verschleiern von Informationen auf diesem Wege muss
+also ebenfalls implementiert werden, damit Angreifer nicht mithilfe von
+elektrischen Signalen Zugriff bekommen \cite{paper}.
 
 \paragraph{Gegenmaßnahmen für GPS-Jamming.}
 Um GPS-Jamming-Angriffe abzuwehren, können Kerbfilter \cite{borio2012}
