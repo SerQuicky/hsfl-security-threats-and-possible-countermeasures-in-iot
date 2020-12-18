@@ -6,7 +6,13 @@ latex/**/*.*
 !latex/*.sty
 !latex/*.bib
 !latex/*.cls
+!latex/*.pdf
 !latex/sections/*.tex
+
+grading/**/*.*
+!grading/*.tex
+!grading/*.bib
+!grading/*.pdf
 
 docs/**/*.*
 !docs/document.pdf
