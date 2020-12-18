@@ -1,0 +1,75 @@
+\documentclass{article}
+\author{Florian Hansen \and Michael Frank}
+\title{Bewertungsbericht für Gruppe 9: Next-Intent Vulnerability}
+
+\usepackage{setspace}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+
+\MakeOuterQuote{"}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.15cm}
+\onehalfspacing
+
+\begin{document}
+  \maketitle
+
+  Die Gruppe 9 hat sich mit der Arbeit von \cite{niv} beschäftigt, die
+  Schwachstellen (NIVs) in öffentlichen und privaten \texttt{Intents} des
+  Android-Betriebssystems behandelt. Kurz zusammengefasst ist der Text
+  verständlich, wir sehen jedoch in der seiner Form sowie im Inhalt
+  Verbesserungsbedarf. Die Ausarbeitung der Gruppe 9 erhält von uns 6,5 von 10
+  Punkten. Im Folgenden begründen wir die Bewertung.
+
+  Im gesamten Text findet man eine Mischung von englischen und deutschen
+  Fachbegriffen, wie beispielsweise die Formulierung \textit{"Diese spezifische
+  Vulnerability betrifft allerdings [...]"}. Die Einhaltung einer Sprache
+  erscheint uns als angemessener und wissenschaftlicher. Zudem haben wir
+  diverse Fehler in der Grammatik feststellen können. Auch dies trägt nicht
+  gerade zur Lesbarkeit bei. Ein Beispiel hierfür ist die Formulierung aus
+  Abschnitt 2 \textit{"So könnte es z.B. passieren, dass ein/e Angreifer*in beim
+  Betrachten der Appstruktur eine öffentlich zugängliche Komponente
+  detektiert, die Variablen an eine private Komponente übergibt"}. Wie man in
+  dem Beispiel und in anderen Abschnitten sieht, werden oft umgangssprachliche
+  Gebilde wie \textit{"kleine Applikationen"} verwendet. "Klein" kann in
+  diesem Kontext alles bedeuten. Ob damit die Anzahl der Zeilen der Codebasis,
+  die Anzahl an Schwachstellen, die Speichergröße, die Popularität oder
+  Einfachheit einer Anwendung gemeint ist, ist nicht klar und muss vermutet
+  werden. \textbf{Hierfür ziehen wir der Gruppe einen halben Punkt ab.}
+
+  Der Inhalt des Textes ist grundsätzlich verständlich, jedoch fühlt man sich an
+  einigen Stellen etwas verlassen. Es werden diverse Fachwörter verwendet, ohne
+  sie auch nur im Ansatz zu erläutern. So ist der Satz \textit{"Eine dieser
+  Sicherheitslücken ist die Next-Intent Vulnerability, welche die Kommunikation
+  zwischen Android Applikationen als Angriffspfad verwendet."} unverständlich,
+  da der Leser nicht genau weiß, was "Angriffspfad" bedeutet. Auch wird dieser
+  Begriff in den folgenden Absätzen nicht erläutert, sodass die Schwachstelle
+  nicht richtig verstanden werden kann. Im selben Zusammenhang werden auch
+  Begriffe wie \textit{"öffentliche Activities"} verwendet, ohne diese zu
+  behandeln. Wie dann die Kommunikation und die damit verbundene Schwachstelle
+  funktioniert, wird hier nicht klar. Es wird auch häufig auf die
+  \textit{"Struktur einer Applikation"} referenziert und damit versucht,
+  Schwachstellen zu erläutern. Jedoch wird dies nirgends definiert bzw.
+  erläutert, sodass auch hier vermutet werden muss, um was es sich handelt.
+  Auch im vierten Abschnitt "Auswertung" hätten wir uns etwas mehr Tiefe
+  gewünscht. Es wird zum Beispiel nicht ganz klar, wie die Zahl "100\%" zustande
+  gekommen ist. Es ist z.B. interessant, ob es sich im Testlauf um eine einzelne
+  Gruppe handelte, welche die manuellen und automatisierten Tests durchführen,
+  oder ob zwei voneinander unabhängige Gruppen gewählt wurden. Die einzelne
+  Gruppe kann unter Umständen von den vorherigen Tests beeinflusst worden sein.
+  Auch wenn die Tiefe des Inhalts darunter leidet, lernt man dennoch ein wenig
+  über die Wichtigkeit beim Umgang mit \texttt{Intents} und Werkzeugen, die
+  Schwachstellen detektieren.  \textbf{Wir ziehen der Gruppe zwei Punkte
+  aufgrund von fehlenden Definitionen und Erläuterungen ab, die den Inhalt
+  unverständlich und oberflächlich gestalten.}
+
+  Als nächstes sind uns fehlende Quellenangaben aufgefallen. Zu Beginn der
+  Arbeit werden alle Quellen einmal genannt, in den Folgeabschnitten ist jedoch
+  nicht mehr ganz klar, auf welche Quelle sich gerade bezogen wird. Man könnte
+  z.B. vermuten, dass sich die restlichen Abschnitte fälschlicherweise auf die
+  zuletzt genannte Quelle beziehen. Gerade in dem Abschnitt 4 "Auswertung"
+  könnte man annehmen, dass es sich dabei um die Ergebnisse der Gruppe selbst
+  und nicht einer ihrer Quellen handelt. \textbf{Wir ziehen der Gruppe einen
+  Punk ab, da lediglich anfangs Quellen genannt werden.} Quellenangaben wären
+  jedoch auch in Folgeabschnitten angebracht gewesen.
+\end{document}
