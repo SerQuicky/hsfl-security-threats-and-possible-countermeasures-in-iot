@@ -2,4 +2,44 @@
 Nachdem der Testaufbau besprochen wurde, gilt es nun in die Rolle des Angreifers
 zu schlüpfen und mögliche Angriffe zu diskutieren und auszuführen. Außerdem soll
 besprochen werden, wie die Angriffe hätten verhindert werden können, sodass die
-Arbeit von~\cite{paper} Anwendung findet.
+Arbeit von~\cite{paper} Anwendung findet. Wie in
+Abbildung~\ref{fig:testing-setup} dargestellt, werden die Komponenten zunächst
+aufgebaut. Folgende Netzwerkteilnehmer werden konfiguriert:
+
+\begin{itemize}
+  \item \textbf{Alice} erhält die IP-Adresse 192.168.0.168 und stellt einen
+    MQTT-Client dar. Es werden bestimmte Topics abonniert, sodass dieses Gerät
+    benachrichtigt wird, falls sich bestimmte Werte im System ändern.
+  \item \textbf{Bob} erhält die IP-Adresse 192.168.0.115 und stellt den
+    MQTT-Broker dar. Dieser empfängt Daten von Sensoren und speichert diese
+    unter einem bestimmten Topic ab. Abonnenten des Topics werden dann von ihm
+    benachrichtigt. Als Anwendung wird \textit{Aedes} verwendet.
+  \item Der \textbf{Sicherheitskamera} (Security Camera) wird die IP-Adresse
+    192.168.0.178 zugewiesen und dient in dem Aufbau als Sensor. Es werden
+    periodisch Bildaufnahmen erzeugt und an Bob gesendet.
+  \item \textbf{Eve} stellt den Angreifer dar und erhält die IP-Adresse
+    192.168.0.171.
+  \item Der \textbf{Router} stellt mit der IP-Adresse 192.168.0.1 das
+    Standard-Gateway des Netzwerks dar.
+\end{itemize}
+
+\subsection{Eavesdropping}
+Ein entscheidender Grund, warum HTTPS als Ergänzung zu HTTP entwickelt wurde,
+ist das Senden und Empfangen von sensiblen Informationen wie Passwörter und
+anderen benutzerspezifischen Eigenschaften. Dies ist auch bei MQTT bzw. MQTTS
+der Fall. Deshalb wird in diesem Abschnitt untersucht, wie sicher das Framework
+\textit{pi-aREST} diesbezüglich ist. Als erster Punkt kann genannt werden, dass
+es nicht möglich ist, den Kommunikationsport einzustellen. Dieser ist fest in
+das Framework eingearbeitet und lautet 1883, was auf einen unverschlüsselten
+Kanal hinweist. Da die Ports jedoch vom Serveradministrator individuell
+verwendet werden können, muss nun untersucht werden, ob die Kommunikation
+tatsächlich unverschlüsselt verläuft. Hierfür wird auf \textit{Eve} das
+Netzwerkanalyse-Tool \textit{Wireshark} installiert und ausgeführt. Zudem werden
+die Dienste von der Sicherheitskamera und Bob gestartet, sodass diese
+miteinander kommunizieren und Daten kontinuierlich ausgetauscht werden. Werden
+Pakete von einem Netzwerkteilnehmer zu einem anderen gesendet, sind diese an
+jedem Knotenpunkt im Netzwerk abgreifbar. Jeder Knotenpunkt entscheidet dann
+anhand der Paket-Header, ob das jeweilige Paket für ihn bestimmt ist. Dadurch,
+dass in der Tat keine Verschlüsselung der Daten erfolgt, können mithilfe von
+\textit{Wireshark} Bildaufnahmen ausgespäht werden, wie
+Abbildung~\ref{fig:wireshark} zeigt.
