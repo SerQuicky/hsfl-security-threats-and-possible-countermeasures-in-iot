@@ -6,13 +6,13 @@ der IT-Sicherheit. Grundsätzlich können Sicherheitsrisiken in drei Bereichen
 auftreten, die hier kurz erläutert werden sollen \cite{paper}.
 
 \subsection{Herausforderungen bei mobilen Geräten}
-\paragraph{Heterogenität.}
+\paragraph{Heterogenität}
 Dieser Bereich behandelt Probleme, die durch die Vielzahl an
 Anwendungsmöglichkeiten in dem IoT entstehen. Dazu zählen unter anderem
 die verbauten Hardware-Komponenten, Protokolle für die Kommunikation unter
 Geräten und Variationen zwischen Geräten und ihrer Rechenleistung \cite{paper}.
 
-\paragraph{Ressourcenbeschränkung.}
+\paragraph{Ressourcenbeschränkung}
 Nicht jedes Gerät beinhaltet einen leistungsstarken Rechner. Oft stößt man bei
 der Entwicklung von IoT-Geräten auf das Problem, dass nicht genug Speicher oder
 Rechenleistung vorhanden ist. Nicht nur bei der Implementation der eigentlichen
@@ -28,7 +28,7 @@ Berechnungen von bilinearen Abbildungen benötigen. Eine vielversprechende Lösu
 ist das Auslagern rechenintensiver Schritte an einem leistungsstarken Server
 \cite{phoabe}.
 
-\paragraph{Dynamische Netzwerktopologie.}
+\paragraph{Dynamische Netzwerktopologie}
 Gerade bei mobilen Geräten innerhalb des IoT haben wir mit "losen" Verbindungen
 zu tun. Zum Beispiel ist es möglich, dass ein Smartphone mit diversen
 WLAN-Hotspots interagiert und damit keine feste Position innerhalb eines
@@ -67,11 +67,10 @@ eine große Menge von sensiblen Daten. Mögliche Angriffe können auf Grundlage 
 Sicherheitsanforderungen aus Abschnitt \ref{sec:def-security} abgeleitet werden
 \cite{paper} und werden in Tabelle \ref{tab:security-threats} dargestellt.
 
-\begin{table}
-  \footnotesize
+\begin{table*}[t]
   \centering
   \label{tab:security-threats}
-  \begin{tabular}{p{4cm}p{9cm}}
+  \begin{tabularx}{\textwidth}{lX}
     \textbf{Anwendungsdomäne} & \textbf{Mögliche Angriffe}\\
     \hline
     Umgebungsüberwachung & DoS/DDoS, MitM, Node capture, Sinkhole, Hello flood,
@@ -97,6 +96,6 @@ Sicherheitsanforderungen aus Abschnitt \ref{sec:def-security} abgeleitet werden
     Spielzeuge & DoS/DDoS, Eavesdropping, MitM, Identity theft, Hijacking,
     Hacking, Backdoor, Masquerading, Spoofing, Malicious code, inappropriate
     network configuration
-  \end{tabular}
+  \end{tabularx}
   \caption{Sicherheitsrisiken pro Domäne \cite{paper}}
-\end{table}
+\end{table*}
