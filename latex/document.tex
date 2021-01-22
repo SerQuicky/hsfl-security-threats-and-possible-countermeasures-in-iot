@@ -1,27 +1,28 @@
-\documentclass{hsflensburg}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
 
-% packages
-%-------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
-\usepackage{csquotes}
-\usepackage{placeins}
-\usepackage{url}
-
-\MakeOuterQuote{"}
-{\renewcommand{\arraystretch}{2.0}% for the vertical padding
-
-% document title
-%-------------------------------------------
-\title{Wissenschaftliche Ausarbeitung}
-\subtitle{Sicherheitsrisiken und Schutzmechanismen in IoT-Anwendungen}
-
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{tabularx}
 
 \begin{document}
-	\maketitle
-  \tableofcontents
+\title{Sicherheitsrisiken und Schutzmechanismen in IoT-Anwendungen}
+    \author{
+      \IEEEauthorblockN{Florian Hansen} \\
+      \textit{Hochschule Flensburg}\\
+      florian.hansen@stud.hs-flensburg.de
+      
+      \and
 
-  \pagebreak
+      \IEEEauthorblockN{Michael Frank} \\
+      \textit{Hochschule Flensburg}\\
+      michael.frank@stud.hs-flensburg.de
+    }
+  \maketitle
+
   % Insert sections here using \input{sections/section.tex}
   \input{sections/introduction.tex}
   \input{sections/domains.tex}
@@ -29,12 +30,10 @@
   \input{sections/defense-against-attacks.tex}
   \input{sections/example.tex}
 
-  \pagebreak
   \input{sections/testing-setup.tex}
   \input{sections/executed-attacks.tex}
   \input{sections/conclusion.tex}
 
-	\clearpage
 	\bibliography{literature}
 	\bibliographystyle{abbrv}
 \end{document}
