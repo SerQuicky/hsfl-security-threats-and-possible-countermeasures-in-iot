@@ -2,6 +2,7 @@ latex/**/*.*
 !latex/images/*.jpg
 !latex/images/*.jpeg
 !latex/images/*.png
+!latex/images/*.puml
 !latex/*.tex
 !latex/*.sty
 !latex/*.bib
