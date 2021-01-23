@@ -23,7 +23,7 @@ entsprechendes Kameramodul verwendet.
 Um zusätzliche Knotenpunkte im Netzwerk zu erzeugen, werden insgesamt zwei
 weitere, virtuelle Maschinen (VM) aufgesetzt und mit dem Netzwerk verbunden. Die
 erste VM fungiert als MQTT-Broker und versorgt alle Abonnenten mit entsprechenden
-Informationen. Geräte, die bestimmte Themen abonnieren, erhalten dementsprechend
+Informationen. Geräte, die bestimmte Topics abonnieren, erhalten dementsprechend
 eine Nachricht, falls sich der abonnierte Wert verändert. So kann das Netzwerk
 theoretisch um weitere Knotenpunkte bzw. Endgeräte erweitert werden und wir
 erhalten damit eine realistische Abbildung eines solchen Szenarios. Die zweite
@@ -43,7 +43,7 @@ festgestellt werden, welche Daten überhaupt sensibel sind. Die Unterscheidung
 ist maßgebend für die Analyse der IT-Sicherheit des Systems und hängt immer vom
 Kontext der Anwendung ab~\cite{paper}. Zum Beispiel ist es möglicherweise
 erwünscht, dass Wetterdaten öffentlich einsehbar sind. Auch wenn diese
-von einem Sensor ausgelesen werden, der sich nicht im Besitz des des Anfragenden
+von einem Sensor ausgelesen werden, der sich nicht im Besitz des Anfragenden
 befindet. Bei Smart-Home-Systemen ist es jedoch eher selten erwünscht, dass sich
 unauthentifizierte Personen Zugang zum Eigenheim beschaffen können. Die
 Klassifizierung, ob Daten sensibel sind oder nicht, hängt also vom jeweiligen
