@@ -7,19 +7,19 @@ Abbildung~\ref{fig:testing-setup} dargestellt, werden die Komponenten zunächst
 aufgebaut. Folgende Netzwerkteilnehmer werden konfiguriert:
 
 \begin{itemize}
-  \item \textbf{Alice} erhält die IP-Adresse 192.168.0.115 und stellt einen
+  \item \textbf{Alice} erhält die IP-Adresse 192.168.2.115 und stellt einen
     MQTT-Client dar. Es werden bestimmte Topics abonniert, sodass dieses Gerät
     benachrichtigt wird, falls sich bestimmte Werte im System ändern.
-  \item \textbf{Bob} erhält die IP-Adresse 192.168.0.171 und stellt den
+  \item \textbf{Bob} erhält die IP-Adresse 192.168.2.171 und stellt den
     MQTT-Broker dar. Dieser empfängt Daten von Sensoren und speichert diese
     unter einem bestimmten Topic ab. Abonnenten des Topics werden dann von ihm
     benachrichtigt. Als Anwendung wird \textit{Aedes} verwendet.
   \item Der \textbf{Sicherheitskamera} (Security Camera) wird die IP-Adresse
-    192.168.0.178 zugewiesen und dient in dem Aufbau als Sensor. Es werden
+    192.168.2.178 zugewiesen und dient in dem Aufbau als Sensor. Es werden
     periodisch Bildaufnahmen erzeugt und an Bob gesendet.
   \item \textbf{Eve} stellt den Angreifer dar und erhält die IP-Adresse
-    192.168.0.168.
-  \item Der \textbf{Router} stellt mit der IP-Adresse 192.168.0.1 das
+    192.168.2.168.
+  \item Der \textbf{Router} stellt mit der IP-Adresse 192.168.2.1 das
     Standard-Gateway des Netzwerks dar.
 \end{itemize}
 
