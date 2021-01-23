@@ -34,7 +34,7 @@ stattfinden \cite{piarestgtihub}.
 
 \subsubsection{HTTP-Server}
 Nachdem Ausführen der Node-Anwendung mit der importierten Bibliothek, startet \textit{pi-aREST} einen 
-\textit{express} HTTP-Server auf dem IoT-Gerät zum Bereitstellen einer REST-API. Die API besitzt
+Express-HTTP-Server auf dem IoT-Gerät zum Bereitstellen einer REST-API. Die API besitzt
 verschiedene Endpunkte, welche entweder innerhalb des Netzwerkes oder aus dem Internet aufgerufen werden
 können.  \cite{piarestgtihub}
 
@@ -74,40 +74,40 @@ Kommunikationsprotokoll auf der Anwendungsebene. Das Protokoll zeichnet sich
 durch ressourcensparende Datenpakete mit einem geringen Overhead aus, wodurch
 es bspw. oftmals in der Kommunikation zwischen IoT-Geräten (M2M) eingesetzt
 wird. Das Protokoll basiert auf der Publish/Subscribe-Architektur. So nehmen
-Clients die Rollen eines \textit{Publisher (Sender)} oder \textit{Subscriber
+Clients die Rollen eines \textit{Publishers (Sender)} oder \textit{Subscribers
 (Em- pfänger)} ein und kommunizieren über den sogenannten \textit{Broker}
 miteinander. \cite{mqtt, wong20man}
 
 \paragraph{Publisher} 
 Dieser Client sendet Nachrichten an einen \textit{Broker}, wobei die
-übersendeten Nachrichten eine spezielle \textit{Topic (Thema)} enthalten.
-Die übergebene \textit{Topic} ist wichtig für das Weiterleiten der Nachrichten
-an andere Clients. \cite{mqtt, wong20man}
+übersendeten Nachrichten ein spezielles \textit{Topic (Thema)} enthalten.
+Das übergebene \textit{Topic} ist wichtig für das Weiterleiten der Nachrichten
+an andere Clients \cite{mqtt, wong20man}.
 
 \paragraph{Subscriber} 
-Im Gegenteil zum \textit{Publisher} sendet der \textit{Subscriber} keine
-Nachrichten an \textit{Broker}, sondern abonniert \textit{(subscriped}) sich
-beim \textit{Broker} für eine bestimmtes \textit{Topic}.  Wenn ein
-\textit{Publisher} eine Nachricht mit dem abonnierten \textit{Topic} an den
-\textit{Broker} sendet, erhalten alle \textit{Subscriber} dieses
-\textit{Topics} die Nachricht \cite{mqtt, wong20man}.
+Im Gegensatz zum \textit{Publisher} sendet der \textit{Subscriber} keine
+Nachrichten an \textit{Broker}, sondern abonniert \textit{(subscribe}) beim
+\textit{Broker} ein bestimmtes \textit{Topic}.  Wenn ein \textit{Publisher}
+eine Nachricht mit dem abonnierten \textit{Topic} an den \textit{Broker}
+sendet, erhalten alle \textit{Subscriber} dieses \textit{Topics} die Nachricht
+\cite{mqtt, wong20man}.
 
 \paragraph{Broker} 
 Die Funktionalität des \textit{Brokers} wurde bereits teilweise bei den anderen
 Protokoll-Teilnehmern beschrieben. Seine Hauptaufgabe ist das Steuern des
 Datenverkehrs zwischen den verschiedenen Clients.  So nimmt dieser die
-Nachrichten der \textit{Publisher} an und sendet diese nur an die, für das
-\textit{Topic} abonnierte, \textit{Subscriber} \cite{mqtt, wong20man}.
+Nachrichten der \textit{Publisher} an und sendet diese nur an die Subscriber,
+die das jeweilige Topic abonniert haben \cite{mqtt, wong20man}.
 
 Beim Ausführen der Node-Anwendung mit \textit{pi-aREST} verbindet sich das
-IoT-Gerät als Publisher-Client mit einem MQTT-Broker über den Port 1883. Die
+IoT-Gerät als Publisher mit einem MQTT-Broker über den Port 1883. Die
 Broker-Adresse wird von der Node-Anwendung vorgegeben.  \textit{pi-aREST}
 sendet daraufhin die Verbindungsanfrage an den Broker. Das IoT-Gerät sendet
 nach dem erfolgreichen Verbindungsaufbau in einem regelmäßigen Zeitintervall
-die Daten, in im Falle des Experimentes die Überwachungsbilder, mit einem
-speziellen Topic an den Broker \cite{piarestgtihub}.
+die Daten mit einem speziellen Topic an den Broker. In diesem Experiment sind
+dies die Überwachungsbilder.
 
-\begin{figure}[htbp]
+\begin{figure}[t]
   \centering
   \includegraphics[width=250px]{images/mqtt.png}
   \caption{MQTT-Architektur für die Node-Anwendung \cite{mqtt}}
