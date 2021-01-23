@@ -1,0 +1,18 @@
+\section{Fazit}
+Wir haben besprochen, welche Protokolle in der IoT verwendet werden, um Daten
+miteinander kontinuierlich auszutauschen und dass Sicherheitsanforderungen
+abhängig von ihrer Domäne sind. So sind Anforderungen an die Automobil-Industrie
+andere als die der Spielzeug-Domäne. Eine detaillierte Betrachtung des Kontexts
+einer IoT-Anwendung ist demnach essentiell für das Etablieren von IT-Sicherheit.
+Mit diesem Wissen haben wir uns ein Projekt bzw. Framework ausgesucht, welches
+bekannte Protokolle wie MQTT implementiert und einen Datenaustausch zwischen
+IoT-Geräten ermöglicht. Mithilfe dieses Frameworks wurde eine Sicherheitskamera
+entwickelt und anschließend auf IT-Sicherheit überprüft. Dabei wurden ebenfalls
+die verwendeten Angriffstechniken besprochen. Als Ergebnis kam vor allem heraus,
+dass das Framework ausschließlich die Kommunikation über unverschlüsselte Kanäle
+anbietet. Dies ist jedoch in sehr vielen IoT-Anwendungen eine Verletzung der
+IT-Sicherheit. Besonders bei unserem Beispiel mit der Sicherheitskamera konnten
+wir zeigen, dass aufgrund der Tatsache, dass keine geeignete Verschlüsselung
+verwendet wird, Bildaufnahmen der Kamera mit einfachsten Mitteln ausgespäht
+werden können. Auch schützt das Framework nicht vor Fälschung der Daten, sodass
+die Bildaufnahmen manipuliert zum Broker gelangen können.

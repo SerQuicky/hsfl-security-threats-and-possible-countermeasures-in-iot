@@ -15,11 +15,11 @@ skinparam rectangle {
   shadowing false
 }
 
-rectangle "<color:#000000><$Client></color>\nAlice\n192.168.0.168/24" as alice
-rectangle "<color:#000000><$Client></color>\nEve\n192.168.0.171/24" as eve
-rectangle "<color:#000000><$TraditionalServer></color>\nBob\n192.168.0.115/24" as bob
-rectangle "<color:#000000><$IoTCamera></color>\nSecurity Camera\n192.168.0.178/24" as pi
-rectangle "<color:#000000><$VPCRouter></color>\nRouter\n192.168.0.1" as router
+rectangle "<color:#000000><$Client></color>\nAlice\n192.168.2.115/24" as alice
+rectangle "<color:#000000><$Client></color>\nEve\n192.168.2.168/24" as eve
+rectangle "<color:#000000><$TraditionalServer></color>\nBob\n192.168.2.171/24" as bob
+rectangle "<color:#000000><$IoTCamera></color>\nSecurity Camera\n192.168.2.178/24" as pi
+rectangle "<color:#000000><$VPCRouter></color>\nRouter\n192.168.2.1" as router
 
 alice -- router
 eve -- router
